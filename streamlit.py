@@ -67,6 +67,10 @@ def main():
             })
             st.bar_chart(chart_data.set_index("Parameter"))
             
+            # Waktu Real-time
+            current_time = datetime.now()
+            st.caption(f"🕒 Waktu Saat Ini: {current_time.strftime('%d/%m/%Y %H:%M:%S')}")
+            
             # Last Updated
             last_update = datetime.fromtimestamp(data["timestamp"]/1000)
             st.caption(f"🕒 Terakhir Update: {last_update.strftime('%d/%m/%Y %H:%M:%S')}")
